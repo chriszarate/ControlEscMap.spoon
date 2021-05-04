@@ -16,7 +16,7 @@ Now load the spoon from your Hammerspoon config:
 
 ```lua
 hs.loadSpoon('ControlEscMap')
-spoon.ControlEscMap:start({timeout: 0.2})
+spoon.ControlEscMap:start({timeout = 0.2})
 ```
 
 # Configuration
