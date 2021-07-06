@@ -64,7 +64,7 @@ end
 --- Returns:
 ---  * self (allow chaining)
 function obj:start(config)
-	local timeout = config.timeout or 0.2
+	local timeout = (config and config.timeout) or 0.2
 	state.timer = hs.timer.delayed.new(timeout, reset)
 
 	self.event_on = hs.eventtap.new({hs.eventtap.event.types.flagsChanged}, handler)
